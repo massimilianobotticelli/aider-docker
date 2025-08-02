@@ -60,7 +60,7 @@ To use `aider` on one of your projects, navigate to your project's root director
 #### To use Google Gemini:
 
 ```bash
-docker-compose -f /path/to/aider-docker/docker-compose.yml run --rm aider --model google/gemini-1.5-pro-latest
+docker-compose -f /path/to/aider-docker/docker-compose.yml run --rm aider --model gemini
 ````
 
 #### To use OpenAI (GPT-4o):
@@ -116,7 +116,7 @@ After setting up the alias or function, you can simply run `aider-docker` from a
 
 ```bash
 # Use Gemini
-aider-docker --model google/gemini-1.5-pro-latest
+aider-docker --model gemini
 
 # Use GPT-4o
 aider-docker --model gpt-4o
