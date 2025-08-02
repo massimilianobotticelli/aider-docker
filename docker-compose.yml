@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  aider:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Mount the current directory on the host to the /app directory in the container
+    volumes:
+      - .:/app
+    # Pass API keys from a .env file
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    # Keep the container running
+    tty: true
+    stdin_open: true
