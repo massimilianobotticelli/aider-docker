@@ -27,8 +27,8 @@ A self-contained, reusable Docker environment for running `aider-chat`, the AI p
 
 1.  **Clone this repository:**
     ```bash
-    git clone [https://github.com/your-username/aider-docker-env.git](https://github.com/your-username/aider-docker-env.git)
-    cd aider-docker-env
+    git clone [https://github.com/your-username/aider-docker.git](https://github.com/your-username/aider-docker.git)
+    cd aider-docker
     ```
 
 2.  **Create the environment file:**
@@ -55,18 +55,18 @@ A self-contained, reusable Docker environment for running `aider-chat`, the AI p
 
 To use `aider` on one of your projects, navigate to your project's root directory in your terminal and run the `docker-compose` command, pointing it to the `docker-compose.yml` file in this setup.
 
-**Important:** Do **not** run this from the `aider-docker-env` directory. Run it from the directory of the code you want to edit.
+**Important:** Do **not** run this from the `aider-docker` directory. Run it from the directory of the code you want to edit.
 
 #### To use Google Gemini:
 
 ```bash
-docker-compose -f /path/to/aider-docker-env/docker-compose.yml run --rm aider --model google/gemini-1.5-pro-latest
+docker-compose -f /path/to/aider-docker/docker-compose.yml run --rm aider --model google/gemini-1.5-pro-latest
 ````
 
 #### To use OpenAI (GPT-4o):
 
 ```bash
-docker-compose -f /path/to/aider-docker-env/docker-compose.yml run --rm aider --model gpt-4o
+docker-compose -f /path/to/aider-docker/docker-compose.yml run --rm aider --model gpt-4o
 ```
 
 ### Pro Tip: Create a Permanent Command
@@ -78,8 +78,8 @@ To make this much easier to use, you can add a permanent alias or function to yo
 1.  Add the following line to your shell's configuration file (e.g., `~/.zshrc` or `~/.bashrc`):
 
     ```bash
-    # Replace /path/to/aider-docker-env with the actual path to this project
-    alias aider-docker="docker-compose -f /path/to/aider-docker-env/docker-compose.yml run --rm aider"
+    # Replace /path/to/aider-docker with the actual path to this project
+    alias aider-docker="docker-compose -f /path/to/aider-docker/docker-compose.yml run --rm aider"
     ```
 
 2.  Reload your shell (`source ~/.zshrc` or start a new terminal).
@@ -94,11 +94,11 @@ On Windows, you can create a permanent function in your PowerShell profile.
     notepad $PROFILE
     ```
 
-2.  Add the following function to the file. **Make sure to replace `C:\path\to\aider-docker-env` with the actual, full path to this project's directory.**
+2.  Add the following function to the file. **Make sure to replace `C:\path\to\aider-docker` with the actual, full path to this project's directory.**
 
     ```powershell
     function aider-docker {
-        docker-compose -f C:\path\to\aider-docker-env\docker-compose.yml run --rm aider $args
+        docker-compose -f C:\path\to\aider-docker\docker-compose.yml run --rm aider $args
     }
     ```
 
