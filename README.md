@@ -36,7 +36,7 @@ A self-contained, reusable Docker environment for running `aider-chat`, the AI p
 
     **For Google Gemini:**
     ```env
-    GOOGLE_API_KEY=your_google_api_key_here
+    GEMINI_API_KEY=your_google_api_key_here
     ```
 
     **For OpenAI:**
